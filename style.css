@@ -1,0 +1,32 @@
+body {
+    background-color: #967BB6;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+a {
+    background-color: gold;
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+    margin: 0 25px;
+    padding: 0;
+    justify-content: space-around;
+    display: flex;
+    float: right;
+    text-align: center;
+    border-radius: 15px;
+    border-color: none;
+    width: 180px;
+}
+
+a:hover {
+    background-color: goldenrod;
+    color: rgb(30, 30, 30);
+}
