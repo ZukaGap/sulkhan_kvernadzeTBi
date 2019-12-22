@@ -20,8 +20,8 @@ var marker = new google.maps.Marker({
     position: {lat:41.7169375,lng:44.7215625},
     map: map,
 //    icon:icon,
-    animation: google.maps.Animation.DROP,
-    draggable: true
+    animation: google.maps.Animation.DROP,  // BOUNCE
+    draggable: false    // true ro chawer markeri ar ivlis
 });
 
 //Define OSM map type pointing at the OpenStreetMap tile server
