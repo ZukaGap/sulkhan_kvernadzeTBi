@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="./style.css" />
+        <link rel="stylesheet" type="text/css" href="./styleRegistration.css" />
         <title>სულხან კვერნაძე</title>
     </head>
     <body>
@@ -16,12 +16,13 @@
         <br />
         <h1>სულხან კვერნაძის<br />საქართველოს სახელმწიფო უნივერსიტეტი</h1>
         <div class="maindiv">
-            <input type="name" id='Name' placeholder="სახელი"  >
+            <input type="name" placeholder="სახელი" id='Name'  >
             <input type="name" placeholder="გვარი" id="Surname" >
             <input type="number" placeholder="პირადი ნომერი" id="Id" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  >
             <input type="number" placeholder="ტელეფონი" id="Phone" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"  >
             <input type="email" placeholder="მეილი" id='Email' >
-            <button onclick="window.location.href='../Passed/Passed.html'">დააკლიკე და ჩაირიცხე</button>
+            <button onclick="Enroll()" id="Submit" >დააკლიკე და ჩაირიცხე</button>
         </div>
+        <script type="text/javascript" src="./scriptRegistration.js"></script>
     </body>
 </html>

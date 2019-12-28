@@ -16,6 +16,22 @@ var icon = {
 };
 */
 
+var contentString = '<div id="content" >'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">სულხან კვერნაძე</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>სულხან კვერნაძე</b>, მდებარეობს საბურთალოზე ქალაქის <b>დასალიერში</b>,' +
+      ' სადაც სტუდენტებს შესაძლებლობა ეძლევათ გახურონ როგორც უნდათ.'+
+      ' ასე რომ ყველას გირჩევთ დააკლიკოთ და ჩაირიცხოთ.'+
+      '</p>'+
+      '</div>'+
+      '</div>';
+
+var infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
 var marker = new google.maps.Marker({
     position: {lat:41.7169375,lng:44.7215625},
     map: map,
@@ -33,3 +49,5 @@ map.mapTypes.set("OSM", new google.maps.ImageMapType({
     name: "OpenStreetMap",
     maxZoom: 18
 }));
+
+infowindow.open(map, marker);
