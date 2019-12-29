@@ -20,9 +20,10 @@ function Enroll(){
             x[y].style.border = "1px solid red"; 
             check++; 
         }            
-    }
-    if(!check)    
-    {
+    }   
+
+    if(!check && IdIn.value.length === 11 )    
         document.location = '../Passed/Passed.html';   
-    }
+    else
+        IdIn.style.border = "1px solid red";
 }
