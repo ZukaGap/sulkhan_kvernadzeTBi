@@ -11,19 +11,23 @@ var EmailIn = document.getElementById("Email");
 // });
 
 function Enroll(){
-    var x = [ NameIn, SNameIn, IdIn, PhoneIn, EmailIn ]
+    var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    var x = [ NameIn, SNameIn, IdIn, PhoneIn, EmailIn ];
+    var checkArr = [ NameIn.value.length > 1, SNameIn.value.length > 3,
+         IdIn.value.length === 11, PhoneIn.value.length === 9,
+         EmailIn.value.match(mailformat) ];
+
     var check = 0;
     for(var y = 0; y < x.length; y++ )
     {
-        if(x[y].value.length === 0)
+        if(checkArr[y] === false || checkArr[y] === null)
         {
             x[y].style.border = "1px solid red"; 
             check++; 
-        }            
-    }   
-
-    if(!check && IdIn.value.length === 11 )    
-        document.location = '../Passed/Passed.html';   
-    else
-        IdIn.style.border = "1px solid red";
+        }           
+        else
+            x[y].style.border = "1px solid chartreuse";
+    }
+    if(!check)    
+        document.location = '../Passed/Passed.html';
 }
