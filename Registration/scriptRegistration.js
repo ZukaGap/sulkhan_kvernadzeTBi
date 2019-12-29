@@ -11,12 +11,18 @@ var EmailIn = document.getElementById("Email");
 // });
 
 function Enroll(){
-    if(NameIn.value.length &&
-        SNameIn.value.length &&
-        IdIn.value.length &&
-        PhoneIn.value.length &&
-        EmailIn.value.length)
+    var x = [ NameIn, SNameIn, IdIn, PhoneIn, EmailIn ]
+    var check = 0;
+    for(var y = 0; y < x.length; y++ )
     {
-        document.location = '../Passed/Passed.html';
+        if(x[y].value.length === 0)
+        {
+            x[y].style.border = "1px solid red"; 
+            check++; 
+        }            
+    }
+    if(!check)    
+    {
+        document.location = '../Passed/Passed.html';   
     }
 }
