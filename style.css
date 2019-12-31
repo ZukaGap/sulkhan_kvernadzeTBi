@@ -1,32 +1,75 @@
+@font-face {
+    src: url(../Font/bpg_nateli_asomtavruli.ttf);
+    font-family: asomtavruli;
+}
+
 body {
-    background-color: #967BB6;
-    text-align: center;
+    margin: 0;
+    background-color: #222;
+    font-family: 'Work Sans',sans-serif;
+    font-weight: 400;
 }
 
-.nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
+.container {
+    width: 80%;
+    margin: 0 auto;
 }
 
-a {
-    background-color: gold;
-    color: black;
-    font-size: 25px;
-    text-decoration: none;
-    margin: 0 25px;
-    padding: 0;
-    justify-content: space-around;
-    display: flex;
+header {
+    background-color: #55d6aa;
+
+}
+
+.logo {
+    float: left;
+    padding: 10px 0;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
     float: right;
-    text-align: center;
-    border-radius: 15px;
-    border-color: none;
-    width: 180px;
 }
 
-a:hover {
-    background-color: goldenrod;
-    color: rgb(30, 30, 30);
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 20px;
+    position: relative;
+}
+
+nav a {
+    color: #444;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before {
+    width: 100%;
 }

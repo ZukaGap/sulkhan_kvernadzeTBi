@@ -1,0 +1,94 @@
+@font-face {
+    src: url(../Font/alk-katerina.ttf);
+    font-family: alk-katerina;
+}
+
+h1 {
+    text-align: center;
+    color: #4527a0;
+    font-size: 3em;
+    font-family: alk-katerina;
+}
+
+h1 span {
+    color:#bf360c;
+    font-size: 3em;
+    line-height: .8m;
+}
+
+body {
+    background-color: #1A1A1D;
+}
+
+.center {
+    width: 100%;
+    transform: translateY(50%);
+    position: absolute;
+    float: inherit;
+    text-align: center;
+}
+
+.timer {        
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+/* qvemot vcvli divebis gacentrirebas */
+.timer div {
+    position: relative;
+    width: 100px;
+    padding: 20px;
+    margin: 0 5px;
+    border: 2px solid #000;
+}
+
+.timer div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(255, 255, 255, .2);
+}
+
+.timer div span {
+    display: block;
+    text-align: center;
+}
+
+.timer-numbers {
+    font-family: 'Black Ops One', cursive;
+    font-size: 4.5rem;
+}
+.timer-dots {
+    color: #C2185B;    
+    font-family: 'Black Ops One', cursive;
+    font-size: 4.5rem;
+}
+
+.timer-numbers {
+    color: #FFF;
+}
+
+#weeks,#days {
+    background-color: #880e4f;
+}
+
+#hours {
+    background-color:#ad1457;
+}
+
+#minutes {
+    background-color:#c2185b;
+}
+
+/* aq xdeba centrireba radgan yvela elements autos ro vuwer ar gamodis karg dizainze */
+.timer div:first-child {
+    margin-left: auto;
+}
+
+.timer div:last-child {
+    background-color: #d81b60;
+    margin-right: auto;
+}
