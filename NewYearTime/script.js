@@ -1,4 +1,4 @@
-$('.timer').countdown('2020/1/1', function(event) {
+$('.timer').countdown('2020/23/1', function(event) {
     var $this = $(this).html(event.strftime(''
     +'<div id="weeks"><span class="timer-numbers" >%w</span><span>კვირა</span></div>'
     +'<div id="days"><span class="timer-numbers"  >%d</span><span>დღე</span></div>'
